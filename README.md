@@ -1,1 +1,17 @@
 # slurm-scripting-pipelines
+
+Example slurm pipeline:
+
+Say you have 3 steps to your code that are written in 3 separate scripts.
+* step1_script.sh
+* step2_script.sh
+* step3_script.sh
+
+You could combine the separate scripts into a single, large script, or you could use SLURM's dependency feature to make a simple pipeline. All you have to do is add arguments to `sbatch`.
+
+```bash
+step1_jobid=$(sbatch --parsable step1_script.sh)
+step2_jobid=$(sbatch --parsable --dependency=afterok:${step1_jobid} step2_script.sh)
+step3_jobid=$(sbatch --parsable --dependency=afterok:${step2_jobid} step3_script.sh)
+```
+Notice the use of the `$( ... )` construct to capture command output. When `sbatch` is run with the `--parsable` flag, it only returns the job ID which can be saved to a variable. That variable is referenced using the `--dependency=afterok`

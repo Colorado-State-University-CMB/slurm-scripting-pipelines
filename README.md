@@ -1,4 +1,14 @@
-# slurm-scripting-pipelines
+# Scripting and pipeline development in a SLURM environment (HPC).
+
+# Scripting
+
+I find that scripting leads naturally from working things out on the command line and realizing you'd rather automate a task and/or create a tool that you can reuse. In fact, BASH scripts are simply commands in a file that you could execute at the prompt one at a time, but are easier to run as a cohesive unit.
+
+With that in mind, the steps to scripting that I encounter are as follows:
+
+- Experiment/learn what commands you need
+- Put them in a file and run a prototype. Test it and work out the kinks.
+- Once 
 
 Example slurm pipeline:
 

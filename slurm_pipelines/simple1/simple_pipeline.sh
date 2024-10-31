@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-step1=$(sbatch --parsable sleep10.sh)
-step2=$(sbatch --parsable --dependency=afterok:$step1 sleep10.sh )
-step3=$(sbatch --parsable --dependency=afterok:$step2 sleep10.sh )
+step1=$(sbatch --parsable sleep10_alpine.sh)
+step2=$(sbatch --parsable --dependency=afterok:$step1 sleep10_alpine.sh )
+step3=$(sbatch --parsable --dependency=afterok:$step2 sleep10_alpine.sh )
 
 
 # takes a moment to get going

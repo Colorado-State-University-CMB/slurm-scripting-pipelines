@@ -1,0 +1,365 @@
+(base) [dcking@colostate.edu@login-ci2 simple1]$ bash simple_pipeline.sh 
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    RUNNING   00:00:03   00:01:00 2024-10-31T15:12:29             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c  R       0:03      1 c3cpu-c15-u1-2
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    RUNNING   00:00:07   00:01:00 2024-10-31T15:12:29             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c  R       0:07      1 c3cpu-c15-u1-2
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1    RUNNING   00:00:11   00:01:00 2024-10-31T15:12:29             Unknown                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059542    amilan sleep_10 dcking@c  R       0:11      1 c3cpu-c15-u1-2
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (None)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (None)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (None)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c PD       0:00      1 (None)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    RUNNING   00:00:00   00:01:00 2024-10-31T15:13:00             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c  R       0:00      1 c3cpu-c15-u1-2
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    RUNNING   00:00:05   00:01:00 2024-10-31T15:13:00             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c  R       0:05      1 c3cpu-c15-u1-2
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1    RUNNING   00:00:09   00:01:00 2024-10-31T15:13:00             Unknown             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Dependency)
+           9059543    amilan sleep_10 dcking@c  R       0:09      1 c3cpu-c15-u1-2
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (None)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    PENDING   00:00:00   00:01:00             Unknown             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c PD       0:00      1 (Priority)
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    RUNNING   00:00:02   00:01:00 2024-10-31T15:13:31             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c  R       0:02      1 c3cpu-c15-u1-1
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    RUNNING   00:00:07   00:01:00 2024-10-31T15:13:31             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c  R       0:07      1 c3cpu-c15-u1-1
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1    RUNNING   00:00:11   00:01:00 2024-10-31T15:13:31             Unknown             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           9059544    amilan sleep_10 dcking@c  R       0:11      1 c3cpu-c15-u1-1
+
+
+Hit CTRL-C to quit monitoring jobs {9059542,9059543,9059544}. Run `job_monitor.sh 9059542,9059543,9059544` to restart job monitor.
+sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 9059542,9059543,9059544
+JobID           JobName  AllocCPUS      State    Elapsed  Timelimit               Start                 End                 Reason 
+------------ ---------- ---------- ---------- ---------- ---------- ------------------- ------------------- ---------------------- 
+9059542        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:12:29 2024-10-31T15:12:40                   None 
+9059543        sleep_10          1  COMPLETED   00:00:10   00:01:00 2024-10-31T15:13:00 2024-10-31T15:13:10             Dependency 
+9059544        sleep_10          1  COMPLETED   00:00:11   00:01:00 2024-10-31T15:13:31 2024-10-31T15:13:42             Dependency 
+
+squeue -u dcking@colostate.edu -j 9059542,9059543,9059544
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+
+
+No jobs are running or pending... done.

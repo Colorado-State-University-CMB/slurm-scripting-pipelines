@@ -78,8 +78,10 @@ fi
 
 
 # Actual installation
-for exe in ./bin
+for exe in ./bin/*
 do
+    [[ $exe =~ "README.md" ]] && continue
+
     cp -v $exe $INSTALL_PATH
-    chmod a+x $INSTALL_PATH/$exe
+    chmod a+x $exe
 done

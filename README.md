@@ -7,8 +7,9 @@ I find that scripting leads naturally from working things out on the command lin
 With that in mind, the steps to scripting that I encounter are as follows:
 
 - Experiment/learn what commands you need
-- Put them in a file and run a prototype. Test it and work out the kinks.
-- Once 
+- Put commands in a file- this is your script:  Start simple. Build up.
+- Refinement: Test it out, make it generalizable with special variables such as `$@` (command line input)
+- Error checking: Account for possible pitfalls. Improve output.
 
 Example slurm pipeline:
 

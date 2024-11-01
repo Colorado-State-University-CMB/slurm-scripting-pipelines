@@ -1,5 +1,7 @@
 ## Example using simple_pipeline.sh on Riviera
 
+Using the tools in this repository, you can launch the simple pipeline that has three steps: the sleep10 script runs three times in succession, each waiting for the last to finish using the `--dependency` argument to specify the previous jobs.
+
 ```bash
 (base) [dking@login001 ~/dev/slurm-scripting-pipelines/slurm_pipelines/simple1]$ bash simple_pipeline_riviera.sh 
 sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 25736,25737,25738
@@ -12,9 +14,9 @@ squeue -u dking -j 25736,25737,25738
              25737 short-cpu sleep_10    dking PD       0:00      1 (Dependency)
              25738 short-cpu sleep_10    dking PD       0:00      1 (Dependency)
              25736 short-cpu sleep_10    dking  R       0:01      1 node001
-```
 
 Hit CTRL-C to quit monitoring jobs {25736,25737,25738}. Run `job_monitor.sh 25736,25737,25738` to restart job monitor.
+```
 
 ```base
 sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason -j 25736,25737,25738

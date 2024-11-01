@@ -1,4 +1,4 @@
-## Example using simple_pipeline.sh 
+## Example using simple_pipeline.sh on Riviera
 
 ```bash
 (base) [dking@login001 ~/dev/slurm-scripting-pipelines/slurm_pipelines/simple1]$ bash simple_pipeline_riviera.sh 

@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 echo "<<<<<< Script started at $(date) >>>>>>"
-set -e # exit on error
-JOBSTEP=SETUP
+set -e
 
-# error handling
 davidsExitFunc()
 {
     exitcode=$1
@@ -17,19 +15,17 @@ davidsExitFunc()
 }
 trap 'davidsExitFunc $?' EXIT
 
-sleep 1
-# BEGIN WORKFLOW
-JOBSTEP=STEP1
-# do something
-JOBSTEP=STEP2
-[ 1 -lt   4 ] # delete a number to trigger a syntax error
+JOBSTEP="STEP 1"
+# 1/2 pass/fail chance
+[ $((RANDOM % 2)) -eq 0 ] && exit 1
 
-JOBSTEP=STEP3
-exit 1 # uncomment to exit in controlled manner
+JOBSTEP="STEP 2"
+# 1/3 chance of failure
+[ $((RANDOM % 3)) -eq 0 ] && exit 1
+JOBSTEP="STEP 3"
+# 1/4 chance of failure
+[ $((RANDOM % 4)) -eq 0 ] && exit 1
 
-JOBSTEP=STEP4
-# stop prematurely but without error, perhaps debugging
-exit 0
-
-JOBSTEP=END
+JOBSTEP="END"
+echo "you made it!"
 

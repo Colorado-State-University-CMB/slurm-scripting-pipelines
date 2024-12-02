@@ -4,6 +4,7 @@
 outcomes=( "syntax error" "controlled error" "early success" "full success")
 outcome=${outcomes[$((RANDOM % ${#outcomes[*]}))]} # sorry for ugly syntax
 echo "Simulating outcome: $outcome"
+sleep 1
 #
 # Establish error function and trap
 set -e # exit on error
@@ -24,6 +25,7 @@ trap 'davidsExitFunc $?' EXIT
 # We are just going to read which outcome was randomly selected
 # and cause the given outcome to trigger the EXIT
 echo "<<<<<< Script started at $(date) >>>>>>"
+sleep 1
 
 JOBSTEP="SYNTAX ERROR"
 if [ "$outcome" == "syntax error" ]

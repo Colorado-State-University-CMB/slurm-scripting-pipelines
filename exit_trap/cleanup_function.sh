@@ -25,7 +25,7 @@ JOBSTEP=STEP2
 [ 1 -lt   4 ] # delete a number to trigger a syntax error
 
 JOBSTEP=STEP3
-exit 1 # uncomment to exit in controlled manner
+#exit 1 # uncomment to exit in controlled manner
 
 JOBSTEP=STEP4
 # stop prematurely but without error, perhaps debugging

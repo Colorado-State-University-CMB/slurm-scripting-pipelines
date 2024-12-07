@@ -87,3 +87,5 @@ do
     cp -v $exe $INSTALL_PATH
     chmod a+x $exe
 done
+
+echo "Installation succeeded!"

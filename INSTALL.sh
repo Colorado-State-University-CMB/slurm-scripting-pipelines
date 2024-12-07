@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -e
+set -o pipefail
 
 writetest() {
     # stat is not portable, so just write a test file
@@ -62,7 +64,7 @@ else
     then
         echo "Can write to $first_writeable"
         read -p "Installing in $first_writeable. OK [y]/n: " response
-        echo $response
+        echo "response: ${response:=y}"
         if [ $response = 'y' ]
         then
             INSTALL_PATH=$first_writeable

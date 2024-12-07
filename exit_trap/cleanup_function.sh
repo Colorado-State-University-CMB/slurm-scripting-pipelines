@@ -22,7 +22,7 @@ sleep 1
 JOBSTEP=STEP1
 # do something
 JOBSTEP=STEP2
-[ 1 -lt   4 ] # delete a number to trigger a syntax error
+[ 1 -lt 4  ] # delete a number to trigger a syntax error
 
 JOBSTEP=STEP3
 #exit 1 # uncomment to exit in controlled manner

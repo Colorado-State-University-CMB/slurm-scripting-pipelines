@@ -37,7 +37,8 @@ else
 fi
 
 # SLURM commands to check jobs
-sacct_cmd="sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason $J_ARG"
+#sacct_cmd="sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason $J_ARG"
+sacct_cmd="SLURM_TIME_FORMAT='%H:%M:%S' sacct -X --format JobID%8,JobName,AllocCPUS%8,State,Elapsed%8,Timelimit%9,Start%8,End%8,Reason%10 $J_ARG"
 squeue_cmd="squeue -u $USER $J_ARG"
 
 

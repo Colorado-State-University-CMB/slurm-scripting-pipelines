@@ -23,6 +23,7 @@ Example pipelines with dependencies.
 
 Contains launchers and simple SLURM scripts that wait some number of seconds, allowing the demonstration of how scripts wait in the queue for Dependencies to finish. Uses `job_monitor.sh` to show changes in the output of `squeue` and `sacct` commands that watch the progress of the pipeline.
 
+![animated](./slurm_pipelines/simple1/gif/simple_pipeline_example.gif)
 
 # Scripting
 

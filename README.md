@@ -1,4 +1,28 @@
 # Scripting and pipeline development in a SLURM environment (HPC).
+This repo has tools, demonstrations and explanatory examples.
+
+## Organization
+The contents accompany the PDF presentation `Pipelines_and_slurm.pdf`
+ - .gitignore - to keep me honest
+ - INSTALL.sh - installs `job_monitor.sh` from `bin`
+ - README.md - this document
+
+#### array_job_scripts
+Array launchers and convergence step pipeline wrapper script.
+
+#### bin
+Contains `job_monitor.sh` which will be installed with `INSTALL.sh`
+
+#### exit_trap
+"Cool" scripting examples showing the use of the EXIT trap in BASH.
+
+#### slurm_pipelines/
+Example pipelines with dependencies.
+
+##### slurm_pipelines/simple1
+
+Contains launchers and simple SLURM scripts that wait some number of seconds, allowing the demonstration of how scripts wait in the queue for Dependencies to finish. Uses `job_monitor.sh` to show changes in the output of `squeue` and `sacct` commands that watch the progress of the pipeline.
+
 
 # Scripting
 

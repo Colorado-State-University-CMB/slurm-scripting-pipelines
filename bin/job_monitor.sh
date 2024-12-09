@@ -2,6 +2,12 @@
 DEFAULT_SECONDS_BETWEEN_CMDS=1
 PROGNAME=$0
 PROGARGS="$@"
+# this is to shorten the restart message if this script is in the USER PATH
+PROGBASENAME=$(basename $PROGNAME)
+if hash $PROGBASENAME 2> /dev/null
+then
+    PROGNAME=$PROGBASENAME
+fi
 
 restart_message() 
 {
@@ -41,6 +47,10 @@ fi
 sacct_cmd="SLURM_TIME_FORMAT='%H:%M:%S' sacct -X --format JobID%8,JobName,AllocCPUS%8,State,Elapsed%8,Timelimit%9,Start%8,End%8,Reason%10 $J_ARG"
 squeue_cmd="squeue -u $USER $J_ARG"
 
+# shorten for readability, user won't be able to see exactly what was done
+display_squeue_cmd=$(printf "% 44s" "squeue")      # format width is based on guess of the amount of output
+display_sacct_cmd=$(printf "% 44s" "sacct $J_ARG") # format width is based on guess of the amount of output
+
 
 if false
 then
@@ -76,7 +86,7 @@ then
         i=$((i++))
     done
 else
-    interval_command="echo $'\n'$squeue_cmd$'\n'; $squeue_cmd; echo $'\n'$sacct_cmd$'\n'; $sacct_cmd"
+    interval_command="echo $'\n'\"$display_squeue_cmd\"$'\n'; $squeue_cmd; echo $'\n'\"$display_sacct_cmd\"$'\n'; $sacct_cmd"
     trap "{ clear; $interval_command; echo; restart_message $PROGNAME $PROGARGS; exit 0; }" SIGINT
     watch -t -n $interval "$interval_command; echo $'\n' 'CTRL-C to quit.'"
 fi

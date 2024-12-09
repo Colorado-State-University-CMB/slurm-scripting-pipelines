@@ -1,5 +1,14 @@
 # Scripting and pipeline development in a SLURM environment (HPC).
+This repo has tools, demonstrations and explanatory examples.
 
+## Organization
+The contents accompany the PDF presentation Pipelines_and_slurm.pdf
+
+#### array_job_scripts
+Array launchers and convergence step pipeline wrapper script.
+
+#### bin
+Contains job_monitor.sh which will be installed with INSTALL.sh
 # Scripting
 
 I find that scripting leads naturally from working things out on the command line and realizing you'd rather automate a task and/or create a tool that you can reuse. In fact, BASH scripts are simply commands in a file that you could execute at the prompt one at a time, but are easier to run as a cohesive unit.

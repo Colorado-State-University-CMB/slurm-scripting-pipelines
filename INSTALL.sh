@@ -80,12 +80,16 @@ fi
 
 
 # Actual installation
-for exe in ./bin/*
+for exe in ./src/*
 do
     [[ $exe =~ "README.md" ]] && continue
-
-    cp -v $exe $INSTALL_PATH
-    chmod a+x $exe
+    if [ "$exe" -nt $INSTALL_PATH/$(basename $exe) ]
+    then
+        cp -v $exe $INSTALL_PATH
+        chmod a+x $exe
+    else
+        echo "$INSTALL_PATH/$(basename $exe) is newer than $exe, skipping."
+    fi
 done
 
-echo "Installation succeeded!"
+echo "Installation finished without errors."

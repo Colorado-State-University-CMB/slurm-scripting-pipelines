@@ -48,9 +48,18 @@ sacct_cmd="SLURM_TIME_FORMAT='%H:%M:%S' sacct -X --format JobID%8,JobName,AllocC
 squeue_cmd="squeue -u $USER $J_ARG"
 
 # shorten for readability, user won't be able to see exactly what was done
-display_squeue_cmd=$(printf "% 44s" "squeue")      # format width is based on guess of the amount of output
-display_sacct_cmd=$(printf "% 44s" "sacct $J_ARG") # format width is based on guess of the amount of output
+W=44 # approximate middle of longer output (from sacct)
+display_squeue_cmd="squeue -u $USER $J_ARG"
+display_sacct_cmd="sacct -X $J_ARG"
+# str lengths
+w_display_squeue_cmd=${#display_squeue_cmd}
+w_display_sacct_cmd=${#display_sacct_cmd}
 
+# figure out padding
+PAD=$(($W + $w_display_squeue_cmd / 2))
+display_squeue_cmd=$(printf "% ${PAD}s" "$display_squeue_cmd")      
+PAD=$(($W + $w_display_sacct_cmd / 2))
+display_sacct_cmd=$(printf "% ${PAD}s" "$display_sacct_cmd") 
 
 if false
 then
@@ -86,7 +95,7 @@ then
         i=$((i++))
     done
 else
-    interval_command="echo $'\n'\"$display_squeue_cmd\"$'\n'; $squeue_cmd; echo $'\n'\"$display_sacct_cmd\"$'\n'; $sacct_cmd"
+    interval_command="echo $PROGNAME $PROGARGS; echo $'\n'\"$display_squeue_cmd\"$'\n'; $squeue_cmd; echo $'\n'\"$display_sacct_cmd\"$'\n'; $sacct_cmd"
     trap "{ clear; $interval_command; echo; restart_message $PROGNAME $PROGARGS; exit 0; }" SIGINT
     watch -t -n $interval "$interval_command; echo $'\n' 'CTRL-C to quit.'"
 fi

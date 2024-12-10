@@ -44,11 +44,11 @@ fi
 
 # SLURM commands to check jobs
 #sacct_cmd="sacct -X --format JobID,JobName,AllocCPUS,State,Elapsed,TimeLimit,Start,End,Reason $J_ARG"
-sacct_cmd="SLURM_TIME_FORMAT='%H:%M:%S' sacct -X --format JobID%8,JobName,AllocCPUS%8,State,Elapsed%8,Timelimit%9,Start%8,End%8,Reason%10 $J_ARG"
+sacct_cmd="SLURM_TIME_FORMAT='%H:%M:%S' sacct -X --format JobID%15,JobName,AllocCPUS%8,State,Elapsed%8,Timelimit%9,Start%8,End%8,Reason%17 $J_ARG"
 squeue_cmd="squeue -u $USER $J_ARG"
 
 # shorten for readability, user won't be able to see exactly what was done
-W=44 # approximate middle of longer output (from sacct)
+W=51 # approximate middle of longer output (from sacct)
 display_squeue_cmd="squeue -u $USER $J_ARG"
 display_sacct_cmd="sacct -X $J_ARG"
 # str lengths

@@ -71,6 +71,7 @@ else
             echo "installing to $INSTALL_PATH"
         else
             echo "Installation aborted by user. Rerun with $0 install_path to specify the location manually."
+            exit 0
         fi
     else
         echo "Cannot write to any of the paths in your \$PATH. Rerun with \`$0 install_path\` to specify the location manually."

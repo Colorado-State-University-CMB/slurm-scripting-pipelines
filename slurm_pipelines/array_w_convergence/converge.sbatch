@@ -5,6 +5,6 @@
 #SBATCH --job-name=converge
 #SBATCH --partition=short-cpu
 #SBATCH --output=%x.%j.log # gives jobname.ID.log
+# converge.sbatch - after array jobs are finished, concat their contents
 dir_to_list=$1
-ls -l $dir_to_list
 cat $dir_to_list/*

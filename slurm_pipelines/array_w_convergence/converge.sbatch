@@ -8,3 +8,4 @@
 # converge.sbatch - after array jobs are finished, concat their contents
 dir_to_list=$1
 cat $dir_to_list/*
+sleep 5
